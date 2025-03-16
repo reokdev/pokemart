@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { sql } from "@/lib/db"
 
+// Force dynamic rendering to disable caching
+export const dynamic = 'force-dynamic'
+
 async function getProducts() {
   try {
     const products = await sql`
